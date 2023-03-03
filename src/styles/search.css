@@ -16,6 +16,7 @@
     display: flex;
     background-color: var(--color-azul);
     height: 5em;
+    width: 100%;
     align-items: center;
     justify-content: center;
     border-radius: 10px;

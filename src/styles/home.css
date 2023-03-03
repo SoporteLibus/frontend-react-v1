@@ -13,9 +13,7 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    justify-items: center;
-    height: 100%;
-    margin-left: 80px;
+    height: auto;
 }
 
 .container .card{
@@ -49,6 +47,7 @@
 .card .face.face1 .content{
     opacity:1;
     transition: 0.5s;
+    text-align: end;
 }
 
 .card:hover .face.face1 .content{

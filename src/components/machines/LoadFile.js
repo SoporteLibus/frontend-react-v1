@@ -29,7 +29,8 @@ export default function LoadFile() {
                         'materia_prima': extraccion[i][9],
                         'numero_de_inyectora': extraccion[i][7],
                         'numero_de_molde': extraccion[i][3],
-                        'tiempo_de_ciclo': extraccion[i][6]
+                        'tiempo_de_ciclo': extraccion[i][6],
+                        'descripcion_material': extraccion[i][10]
                     })
                     // eslint-disable-next-line
                     const post = async () => {
@@ -40,7 +41,8 @@ export default function LoadFile() {
                                 'materia_prima': extraccion[i][9],
                                 'numero_de_inyectora': extraccion[i][7],
                                 'numero_de_molde': extraccion[i][3],
-                                'tiempo_de_ciclo': extraccion[i][6]
+                                'tiempo_de_ciclo': extraccion[i][6],
+                                'descripcion_material': extraccion[i][10]
                             }
                             let options = {
                                 method: 'POST',

@@ -8,6 +8,7 @@ import Bmb from './components/machines/Bmb';
 import Login from './components/Login';
 import Search from './components/machines/Search';
 import ListPage from './components/machines/ListPage';
+import FormPage from './components/machines/FormPage'
 import LoadFile from './components/machines/LoadFile';
 import GeneratorList from './components/generators/GeneratorList';
 import GeneratorList2 from './components/generators/GeneratorList2';
@@ -27,6 +28,7 @@ import Pie from './config/admin/scenes/pie'
 import Line from './config/admin/scenes/line'
 import Calendar from './config/admin/scenes/calendar'
 import Sidebar from './config/admin/scenes/global/Sidebar';
+import TabList from './lib/TabList';
 
 function App() {
     const [isSidebar, setIsSidebar] = React.useState(true);
@@ -120,10 +122,18 @@ function App() {
                 <Route path="app/v1/config/calendar/" element={
                 <ProtectedRoute>
                     <Calendar />
-                    </ProtectedRoute>} />
-         </Routes>
+                </ProtectedRoute>} />
+                <Route path="app/v1/formpage" element={
+                <ProtectedRoute>
+                    <FormPage />
+                </ProtectedRoute>} />
+                <Route path="app/v1/formqr" element={
+                <ProtectedRoute>
+                    <TabList />
+                </ProtectedRoute>} />
+        </Routes>
            
-            <Footer />
+        <Footer />
         </>
     );
 }

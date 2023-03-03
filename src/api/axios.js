@@ -4,6 +4,16 @@ export const api = axios.create({
     baseURL:'http://172.18.7.6:3000/api/v1' 
 })
 
+export const getItemsApi = async (search) => {
+    const response = await api.get(`/form/busqueda?keyword=${search}`,{
+        headers:{
+            'Authorization': await localStorage.getItem('token')
+        }
+    })
+    
+    return response.data
+}
+
 const getPosts = async () => {
     const response = await api.get('/items',{
         headers:{
